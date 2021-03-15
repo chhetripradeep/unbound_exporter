@@ -163,6 +163,18 @@ var (
 			nil,
 			"^num\\.query\\.tls$"),
 		newUnboundMetric(
+			"query_ratelimited",
+			"Total number of queries that were ratelimited.",
+			prometheus.CounterValue,
+			nil,
+			"^num\\.query\\.ratelimited$"),
+		newUnboundMetric(
+			"query_ip_ratelimited",
+			"Total number of queries that were IP ratelimited.",
+			prometheus.CounterValue,
+			nil,
+			"^total\\.num\\.queries_ip_ratelimited$"),
+		newUnboundMetric(
 			"query_types_total",
 			"Total number of queries with a given query type.",
 			prometheus.CounterValue,
